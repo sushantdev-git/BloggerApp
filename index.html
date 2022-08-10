@@ -30,10 +30,12 @@
         </a>
         <ul class="nav justify-content-end">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">Explore</a>
+            <a class="nav-link" aria-current="page" href="#blogsContainer"
+              >Explore</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Post</a>
+            <a class="nav-link" href="#makepost">Post</a>
           </li>
         </ul>
       </div>
@@ -134,6 +136,28 @@
         </li>
       </ul>
     </nav>
+    <div class="container" id="makepost">
+      <h1 class="text-center">Make a post</h1>
+      <div style="width: 60%; margin: auto" class="mb-3">
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input
+            type="text"
+            class="form-control"
+            id="postTitle"
+            aria-describedby="titleHelp"
+          />
+          <div id="titleHelp" class="form-text">Enter a title</div>
+        </div>
+        <div class="mb-3">
+          <label for="body" class="form-label">Content</label>
+          <input type="text" class="form-control" id="postBody" />
+        </div>
+        <button type="submit" class="btn btn-primary" onclick="makePost()">
+          Submit
+        </button>
+      </div>
+    </div>
     <script src="./index.js" />
   </body>
 </html>

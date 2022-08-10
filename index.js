@@ -72,3 +72,24 @@ function changePage(pageNo) {
     blogsContainer.innerHTML += createBlogCard(blogs[i].title, blogs[i].body);
   }
 }
+
+function makePost() {
+  const title = document.getElementById("postTitle").value;
+  const body = document.getElementById("postBody").value;
+
+  if (title == "" || body == "") return;
+
+  blogs = [
+    {
+      title: title,
+      body: body,
+    },
+    ...blogs,
+  ];
+
+  changePage(1);
+  document.getElementById("postTitle").value = "";
+  document.getElementById("postBody").value = "";
+
+  blogsContainer.scrollIntoView({ behavior: "smooth" });
+}
