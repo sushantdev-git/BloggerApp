@@ -74,6 +74,7 @@ function changePage(pageNo) {
 }
 
 function makePost() {
+  
   const title = document.getElementById("postTitle").value;
   const body = document.getElementById("postBody").value;
 
